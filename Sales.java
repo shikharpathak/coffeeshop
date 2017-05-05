@@ -11,7 +11,7 @@ package inventory;
  *
  * @author Shikhar Pathak
  */
-public class Sales implements Serializable{
+public class Sales {
     
     private String id;//to hold the name
     private int sale;//to hold the number of units
