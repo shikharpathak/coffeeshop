@@ -10,15 +10,16 @@ package inventory;
 class Employee 
  
 {
-    private String Name;//To Store the name of Employee
-    private String Id;//To Store the Id of the Employee
-    double Salary;//To Store the Salary of the Employee
+    private String name;//To Store the name of Employee
+    private String id;//To Store the Id of the Employee
+    private Date hireDay;
+    double salary;//To Store the Salary of the Employee
     
-Employee(String Name, String ID, double salary)//Constuctor to initialize the variables
+Employee(String name, String id, double salary)//Constuctor to initialize the variables
     {
-        this.Name=Name;
-        this.Id=ID;
-        this.Salary=salary;
+        this.name=name;
+        this.id=id;
+        this.salary=salary;
     }
     
     
@@ -27,7 +28,11 @@ public String getDetails()//Method to return their complete record as a single S
         return "Name : " + this.Name + " : Id: " + this.Id + "    Salary :" +this.Salary;
     }    
     
-
+public void setHireDay(int year, int month , int day)
+{
+ Date newHireDay=new GregorianCalendar(year, month -1, day).getTime();
+ hireDay.setTime(newHireDay.getTime());
+}
 void setName(String name)
     {
         this.Name=name;    
